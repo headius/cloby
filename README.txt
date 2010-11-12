@@ -1,7 +1,6 @@
 Usage:
 
-* Build the ClojureLibrary.java
-* Put the resulting classes and clojure's jar in CLASSPATH
-* Run JRuby and instantiate ClojureLibrary and call the load method, passing the JRuby runtime
+1. Install the gem
+2. Extend Clojure::Object
 
-You will now have a Clojure::Object class. Extending it will produce Ruby classes with all instance variables as Clojure Refs, so they work appropriately with dosync {} (also provided).
+A top-level method called dosync will be defined that takes a block of code, and your class will have transactional semantics for its instance variables.
