@@ -1,4 +1,4 @@
-require 'clojure'
+require 'cloby'
 
 class MyClojureObj < Clojure::Object
   def initialize
