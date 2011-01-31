@@ -24,6 +24,7 @@ public class ClojureLibrary implements Library{
 
         runtime.getKernel().defineAnnotatedMethods(ClojureDosync.class);
         ClojureAgent.createAgentClass(runtime);
+        ClojureAtom.createAtomClass(runtime);
     }
 
     public static class ClojureObjectAllocator implements ObjectAllocator {

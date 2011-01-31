@@ -11,8 +11,6 @@ import org.jruby.runtime.ObjectAllocator;
 import org.jruby.runtime.ThreadContext;
 import org.jruby.runtime.builtin.IRubyObject;
 import clojure.lang.Agent;
-import clojure.lang.ISeq;
-import clojure.lang.RT;
 import clojure.lang.ArraySeq;
 import org.jruby.javasupport.JavaUtil;
 import org.jruby.runtime.Block;
@@ -90,7 +88,7 @@ public class ClojureAgent extends RubyObject {
 
   @JRubyMethod
   public Object restart(final ThreadContext context, final IRubyObject newState) {
-    return restart(context, newState, new RubyBoolean(context.getRuntime(), true));
+    return restart(context, newState, context.getRuntime().getTrue());
   }
 
   @JRubyMethod
