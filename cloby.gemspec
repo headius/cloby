@@ -13,5 +13,4 @@ Gem::Specification.new do |s|
   s.summary = "Clojure-based transactional semantics for Ruby instance variables"
   s.test_files = Dir["spec/*_spec.rb"]
   s.platform = "java"
-  s.add_dependency "mvn:org.clojure:clojure"
 end
