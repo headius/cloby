@@ -8,7 +8,7 @@ rescue Exception
   begin
     Java::clojure.lang.Ref
   rescue Exception
-    fail "Clojure is not available, load it first"
+    fail "Clojure is not available"
   end
 end
 
