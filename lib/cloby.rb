@@ -4,8 +4,12 @@ require 'jruby'
 begin
   Java::clojure.lang.Ref
 rescue Exception
-  $stderr.puts "Clojure is not available, load it first"
-  raise
+  require "mvn:org.clojure:clojure"
+  begin
+    Java::clojure.lang.Ref
+  rescue Exception
+    fail "Clojure is not available, load it first"
+  end
 end
 
 # load ClojureLibrary
