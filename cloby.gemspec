@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cloby}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
   s.authors = ["Charles Oliver Nutter"]
   s.date = Time.now
   s.description = "Clojure-based transactional semantics for Ruby instance variables"
@@ -13,4 +13,5 @@ Gem::Specification.new do |s|
   s.summary = "Clojure-based transactional semantics for Ruby instance variables"
   s.test_files = Dir["spec/*_spec.rb"]
   s.platform = "java"
+  s.add_dependency "mvn:org.clojure:clojure", "> 1.3"
 end
