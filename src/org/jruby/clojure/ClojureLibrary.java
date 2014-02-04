@@ -43,11 +43,13 @@ public class ClojureLibrary implements Library{
 
         @Override
         public Object getVariable(int index) {
+            if (index < 0) return null;
             return ((IPersistentVector)variableTable.deref()).nth(index);
         }
 
         @Override
         public void setVariable(int index, Object value) {
+            if (index < 0) return;
             try {
                 variableTable.set(((IPersistentVector)variableTable.deref()).assocN(index, value));
             } catch (IllegalStateException ise) {
